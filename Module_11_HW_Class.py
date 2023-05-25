@@ -2,19 +2,6 @@ from collections import UserDict
 from datetime import datetime, timedelta
 import re
 
-# декоратор обробки помилок
-def input_error(func):
-    def inner(*args, **kwargs):
-        try:
-            return func(*args, **kwargs)
-        except KeyError:
-            return "This contact does not exist"
-        except ValueError:
-            return "Please enter name and phone number separated by a space"
-        except IndexError:
-            return "Please enter a contact name"
-    return inner
-
 
 class Field:
 
