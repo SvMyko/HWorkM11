@@ -43,7 +43,7 @@ class Birthday(Field):
         Field.value.fset(self, value)
 
 
-@input_error
+
 class Record:
     def __init__(self, name, phones=None, birthday=None):
         self.name = name
@@ -78,7 +78,7 @@ class Record:
                 return
         raise ValueError
 
-@input_error
+
 class AddressBook(UserDict):
     iterator = None
 
